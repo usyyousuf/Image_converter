@@ -11,6 +11,9 @@ def convertSingleImage(imagePath, outputExtension):
                 im.save(outfile, str.upper(outputExtension))
         except OSError:
             print("cannot convert", imagePath)
+    print("Enter quit to close")
+    print("1. To convert a single image to another format")
+    print("2. To convert a batch images to another format")
 
 def convertBatchImages(imagesPath, inputExtension, outputExtension):
     for infile in os.listdir(imagesPath):
@@ -24,6 +27,9 @@ def convertBatchImages(imagesPath, inputExtension, outputExtension):
                     im.save(outfile, str.upper(outputExtension))
             except OSError:
                 print("cannot convert", infile)
+    print("Enter quit to close")
+    print("1. To convert a single image to another format")
+    print("2. To convert a batch images to another format")
 
 def main():
     option = "start"
